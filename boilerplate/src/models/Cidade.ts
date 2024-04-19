@@ -1,4 +1,4 @@
-export default class Foguete {
+export default class Cidade {
     private _tamanho: string = "";
     private _qtdeTripulantes: number = 0;
     private _peso: number = 0;
