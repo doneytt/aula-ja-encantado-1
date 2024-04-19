@@ -94,21 +94,21 @@ export default class Cidade {
     }
 
 
-    //* -----------------métodos para add----------------- //*
+   
 
 
-    aumentarHabitantes(add: number): void {
+    MaisHabitantes(add: number): void {
         this.habitantes += add;
     }
 
 
-    diminuirHabitantes(add: number): void {
+  MenosHabitantes(add: number): void {
         this.habitantes -= add;
     }
 
 
     editaPrefeito(edita: string): void {
-        this.prefeito = this.prefeito
+        this.prefeito = edita;
     }
 
 
@@ -121,5 +121,6 @@ export default class Cidade {
         console.log(`Nome: ${this._nome}`);
         console.log(`Habitantes: ${this._habitantes}`);
         console.log(`Estado: ${this._estado}`);
+        console.log(`_____________________________________________________________________________________________________________________________________________________________________________________________________`);
     }
 }

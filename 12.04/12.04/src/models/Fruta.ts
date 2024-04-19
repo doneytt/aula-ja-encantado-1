@@ -1,12 +1,12 @@
 export default class Fruta {
     private _nome: string = "";
     private _cor: string = "";
-    private _consumir: number = 0;
+    private _tamanho: number = 100;
 
 
     constructor(nome?: string,
         cor?: string,
-        consumir?: number,
+        tamanho?: number,
     ) {
 
         if (nome !== undefined) {
@@ -15,8 +15,8 @@ export default class Fruta {
         if (cor !== undefined) {
             this.cor = cor;
         }
-        if (consumir !== undefined) {
-            this.consumir = consumir;
+        if (tamanho !== undefined) {
+            this.tamanho = tamanho;
         }
     }
 
@@ -40,22 +40,28 @@ export default class Fruta {
     }
 
 
-    public get consumir(): number {
-        return this._consumir;
+    public get tamanho (): number {
+        return this._tamanho;
     }
 
 
-    public set consumir(value: number) {
-        this._consumir = value;
+    public set tamanho(value: number) {
+        this._tamanho = value;
     }
 
 
     //* ---------------------------------- //*
 
+    consumir(): void {
+        this._tamanho -= 20 ; 
+    }
+
     public imprimeAtributos(): void {
 
         console.log(`Nome: ${this._nome}`);
         console.log(`Cor: ${this._cor}`);
-        console.log(`Consumida: ${this._consumir}`);
+        console.log(`Tamanho restante: ${this._tamanho}`);
+        console.log(`--------------------------------`);
+        
     }
 }
